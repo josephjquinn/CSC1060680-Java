@@ -1,4 +1,5 @@
-package Project;// Joseph Quinn
+package Project;
+// Joseph Quinn
 // CSC1060 Computer Science I, Section 680
 // Nov 8, 2022
 // This program runs a 2 player dice game were the objective is to get to 30 points.
@@ -59,33 +60,33 @@ public class FinalProject
             if (choice == 1 && turn%2 == 0) // logic to determine which players turn it is through even and odd. And then determines what choice was made through 1-3.
             {
                 score1 = score1 + dice.dice1; // based on the choice it will either add one of the dice numbers to the appropriate players score, or add the total to their score. The following else-if statements reflect this.
-                System.out.println("Total: " + score1);
+                System.out.println("New Total: " + score1);
             }
             else if (choice == 1 && turn%2 != 0)
             {
                 score2 = score2 + dice.dice1;
-                System.out.println("Total: " + score2);
+                System.out.println("New Total: " + score2);
             }
             else if (choice == 2 && turn%2 == 0)
             {
                 score1 = score1 + dice.dice2;
-                System.out.println("Total: " + score1);
+                System.out.println("New Total: " + score1);
                 System.out.println("");
             }
             else if (choice == 2 && turn%2 != 0)
             {
                 score2 = score2 + dice.total;
-                System.out.println("Total: " + score2);
+                System.out.println("New Total: " + score2);
             }
             else if (choice == 3 && turn%2 == 0)
             {
                 score1 = score1 + dice.total;
-                System.out.println("Total: " + score1);
+                System.out.println("New Total: " + score1);
             }
             else if (choice == 3 && turn%2 != 0)
             {
                 score2 = score2 + dice.total;
-                System.out.println("Total: " + score2);
+                System.out.println("New Total: " + score2);
             }
 
             if (score1 == 30) // logic after every round to determine if a player has won
@@ -117,6 +118,8 @@ public class FinalProject
 
             turn++; // adds one to the turn counter. This will alternate from even to odd and change which players turn it is.
             System.out.println("|____________________________________________________________________________|"); // barrier after each rond
+            System.out.println(" ");
+            System.out.println(" ");
         }
 
     }
